@@ -156,8 +156,8 @@
                         <option value = "PERU" >PERU</option>
                         <option value = "POLONIA" >POLONIA</option>
                         <option value = "PORTUGAL" >PORTUGAL</option>
-                        <option value = "REINO UNIDO ING" >REINO UNIDO</option>
-                        <option value = "REINO UNIDO INU" >REINO UNIDO</option>
+                        <option value = "REINO UNIDO ING" >REINO UNIDO ING</option>
+                        <option value = "REINO UNIDO INU" >REINO UNIDO INU</option>
                         <option value = "REPUBLICA CENTROAFRICANA" >REPUBLICA CENTROAFRICANA</option>
                         <option value = "REPUBLICA CHECA" >REPUBLICA CHECA</option>
                         <option value = "REPUBLICA DE MACEDONIA" >REPUBLICA DE MACEDONIA</option>
