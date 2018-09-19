@@ -117,6 +117,7 @@
     <script src="{{ asset('plugins/input-mask/jquery.inputmask.js') }}"></script>
     <script src="{{ asset('plugins/input-mask/jquery.inputmask.date.extensions.js') }}"></script>
     <script src="{{ asset('plugins/input-mask/jquery.inputmask.extensions.js') }}"></script>
+    <script src="{{ asset('plugins/moment/moment.js') }}"></script>
     <script src="{{ asset('plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
     <script src="{{ asset('plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js') }}"></script>
     <script>
