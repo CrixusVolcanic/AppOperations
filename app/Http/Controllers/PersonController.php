@@ -47,7 +47,6 @@ class PersonController extends Controller
             $file->move(public_path() . '/images/persons/', $namePicture);
             $person->picture = $namePicture;
         }
-
         $person->name = $request->name;
         $person->id_tp_person = $request->id_tp_person;
         $person->save();

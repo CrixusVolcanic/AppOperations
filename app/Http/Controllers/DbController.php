@@ -125,7 +125,7 @@ class DbController extends Controller
 
         $db->save();
 
-        return 'Guardado';
+        return redirect('/dbs/')->with('status', 'Registro actualizado correctamente');
     }
 
     /**
