@@ -155,11 +155,11 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <div id="gphCountryMaxMonth" class="col-lg-6"></div>
-            <div id="gphCantDbMonth" class="col-lg-6"></div>
+            <div id="gphCountryMaxMonth" class="col-lg-12"></div>
         </div>
         <div class="clearfix"></div><br>
         <div class="col-lg-12">
+	    <div id="gphCantDbMonth" class="col-lg-6"></div>
             <div id="gphTopAnalyst" class="col-lg-6"></div>
         </div>
     </div>
