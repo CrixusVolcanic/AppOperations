@@ -100,7 +100,21 @@ class OlapController extends Controller
 
     public function getFltMonth(Request $request)
     {
-        $this->sql = "select distinct mes from tbl_olap " . "order by case mes when 'ENERO' then 1 when 'FEBRERO' then 2 when 'MARZO' then 3 when 'ABRIL' then 4 when 'MAYO' then 5 when 'JUNIO' then 6 when 'JULIO' then 7 end";
+        $this->sql = "select distinct mes from tbl_olap "
+                        . "order by case mes 
+                                    when 'ENERO' then 1 
+                                    when 'FEBRERO' then 2 
+                                    when 'MARZO' then 3 
+                                    when 'ABRIL' then 4 
+                                    when 'MAYO' then 5 
+                                    when 'JUNIO' then 6 
+                                    when 'JULIO' then 7
+                                    when 'AGOSTO' then 8
+                                    when 'SEPTIEMBRE' then 9
+                                    when 'OCTUBRE' then 10
+                                    when 'NOVIEMBRE' then 11
+                                    when 'DICIEMBRE' then 12
+                                    end";
         if ($request->ajax()) {
             $months = DB::select($this->sql);
             return response()->json($months);
@@ -192,6 +206,23 @@ class OlapController extends Controller
             }
             $efecAnalyst = DB::select($this->sql);
             return json_encode($efecAnalyst);
+        }
+    }
+
+    public function getDataDbsInProgress(Request $request){
+
+        if ($request->ajax()) {
+            $this->sql = "SELECT DISTINCT base
+                              ,date(fecha_llegada) fecha_llegada
+                              ,analista
+                              ,sum(dias_de_retraso) dias_de_retraso
+                            FROM tbl_olap 
+                            WHERE fecha_carga IS NULL 
+                            GROUP BY 1,2,3
+                            ORDER BY 4 DESC;";
+
+            $countriesInProgress = DB::select($this->sql);
+            return json_encode($countriesInProgress);
         }
     }
 }

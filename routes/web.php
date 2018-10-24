@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('dashboard');
 });
 
+Route::get('/controlReplica', function () {
+    return view('controlReplica');
+});
+
 Route::Resource('countries', 'CountryController');
 Route::Resource('tp_persons', 'TpPersonController');
 Route::Resource('persons', 'PersonController');
@@ -31,3 +35,10 @@ Route::get('fltCountry', 'OlapController@getFltCountry');
 Route::get('maxMonthCountry', 'OlapController@getDataMaxMonthContry');
 Route::get('cantMonth', 'OlapController@getDataMonthCant');
 Route::get('efecAnalyst', 'OlapController@getDataEfecAnalyst');
+Route::get('countriesInProgress', 'OlapController@getDataDbsInProgress');
+Route::get('dbIfxCore', 'ControlReplicaController@getDbIfxCore');
+Route::get('tablesIfxCore', 'ControlReplicaController@getTablesIfxCore');
+Route::get('fieldsIfxCore', 'ControlReplicaController@getFieldsIfxCore');
+Route::get('fieldsTDIfxCore', 'ControlReplicaController@getFieldsTDIfxCore');
+Route::get('countRowsIfxCore', 'ControlReplicaController@getCountRowsIfxCore');
+Route::get('dbWeightIfxCore', 'ControlReplicaController@getdbWeightIfxCore');

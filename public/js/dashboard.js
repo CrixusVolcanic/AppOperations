@@ -334,6 +334,28 @@ function populateGphTopAnalyst() {
 
 }
 
+function populateTblCountriesInProgress() {
+    $.ajax({
+        url: 'countriesInProgress',
+        success: function (data) {
+            let datos = jQuery.parseJSON(data);
+            for (i = 0; i < datos.length; i++) {
+                var status = (parseInt(datos[i].dias_de_retraso) > 2 ? 'label label-danger' : 'label label-warning');
+                console.log(status);
+                var tr = '<tr>' +
+                    '<td>' + datos[i].base + '</td>' +
+                    '<td>' + datos[i].fecha_llegada + '</td>' +
+                    '<td>' + datos[i].analista + '</td>' +
+                    '<td class="text-center"><span class="' + status + '">' + datos[i].dias_de_retraso + '</span></td>';
+                $("#tblCountriesInProgress").append(tr);
+            }
+        },
+        error: function () {
+            console.log("No se ha podido obtener la información");
+        }
+    });
+}
+
 function fnResetFlt(){
     delete objDashboard['product'];
     delete objDashboard['year'];
@@ -354,6 +376,7 @@ function populateScreen() {
     populateGphCountryMaxMonth();
     populateGphCantDbMonth();
     populateGphTopAnalyst();
+    populateTblCountriesInProgress();
 }
 
 $(document).ready(function () {

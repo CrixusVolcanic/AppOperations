@@ -4,15 +4,26 @@
 
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
-            <li>
-                <a href="/">
-                    <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-dashboard"></i>
+                    <span>Dashboard</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
                 </a>
+                <ul class="treeview-menu">
+                    <li><a href="/"><i class="fa fa-circle-o"></i> Principal</a></li>
+                    <li><a href="/controlReplica"><i class="fa fa-circle-o"></i> Control Replica</a></li>
+                </ul>
             </li>
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-globe"></i>
                     <span>Paises</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="/countries/"><i class="fa fa-circle-o"></i> Listar paises</a></li>

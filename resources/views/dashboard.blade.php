@@ -154,13 +154,31 @@
     </div>
 
     <div class="row">
-        <div class="col-lg-12">
-            <div id="gphCountryMaxMonth" class="col-lg-12"></div>
-        </div>
-        <div class="clearfix"></div><br>
-        <div class="col-lg-12">
-	    <div id="gphCantDbMonth" class="col-lg-6"></div>
-            <div id="gphTopAnalyst" class="col-lg-6"></div>
+        <div id="gphCantDbMonth" class="col-xs-6"></div>
+        <div id="gphTopAnalyst" class="col-lg-6"></div>
+    </div>
+    <div class="clearfix"></div><br>
+    <div class="row">
+        <div id="gphCountryMaxMonth" class="col-xs-12"></div>
+    </div>
+    <div class="clearfix"></div><br>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">Bases en progreso</h3>
+                </div>
+                <div class="box-body table-responsive no-padding">
+                    <table id="tblCountriesInProgress" class="table table-hover">
+                        <tr>
+                            <th>Base</th>
+                            <th>LLegada</th>
+                            <th>Encargado</th>
+                            <th>Días de retraso</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 @endsection
